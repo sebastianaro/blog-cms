@@ -114,3 +114,37 @@ ul {
       color: #0089F2;
     }
 
+/* Post Submission */
+.post-submissions-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.post-submissions-form input[type=text], 
+.post-submissions-form input[type=date],
+.post-submissions-form textarea {
+    border: 0px;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.post-submissions-form textarea {
+    max-width: 900px;
+    min-height: 200px;
+}
+
+.post-submissions-form button {
+    height: 40px;
+    width: 150px;
+    background-color: #0089F2;
+    color: #fff;
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+    border-radius: 3px;
+}
