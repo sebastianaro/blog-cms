@@ -27,18 +27,18 @@ main{
   margin:0 auto;
 
 }
+/**
+ * Footer
+ */
 
-footer{
-  min-height: 74.6px;
-  max-width: 980px;
-  padding-top: 40px;
-  position: absolute;
+
+.footer{
+  position: relative;
   padding-right: calc(max(22px, env(safe-area-inset-left))); 
   padding-left: calc(max(22px, env(safe-area-inset-left))); 
+  padding-top: 100px;
   margin:0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 980px;
 
 }
 
