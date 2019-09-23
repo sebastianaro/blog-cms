@@ -15,13 +15,24 @@
 		  ?>  
   		
 	</header>
+	<?php
+    function getPostTitlesFromDatabase(){
+    	$postTitles = array("Blog Post 1", "Blog Post 2", "Blog Post 3");
+    	return $postTitles;
+    }
+
+	?>
 	<main>
 		<h1>Sebas's Blog</h1>
 
 		<ul>
-			<li><a href="post.html">Lorem ipsum 1</a></li>
-			<li><a href="post.html">Lorem ipsum 2</a></li>
-			<li><a href="post.html">Lorem ipsum 3</a></li>
+			<?php
+			$postTitles = getPostTitlesFromDatabase();
+
+			foreach ($postTitles as $postTitle)  {
+               echo "<li><a href='post.php'>" . $postTitle . "</a></li>";
+           	    }
+			?>
 		</ul>
 		<a href="part9.php">here</a>
 	</main>
