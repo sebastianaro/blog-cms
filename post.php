@@ -16,13 +16,30 @@
   		
 	</header>
 	<main>
-		<h1>Lorem ipsum 1</h1>
-		<div class="post-author">Sebastian Arteaga</div>
-        <div class="post-date">01/01/2019</div>
-        <div class="post-content">
-        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices mi tempus imperdiet nulla malesuada. Cursus vitae congue mauris rhoncus aenean vel elit. Euismod in pellentesque massa placerat duis ultricies lacus sed. Non arcu risus quis varius quam quisque id diam vel. Pulvinar mattis nunc sed blandit libero volutpat sed cras. Eu ultrices vitae auctor eu. Leo vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin. Dapibus ultrices in iaculis nunc sed augue lacus viverra. Laoreet non curabitur gravida arcu.</p>
+		<?php
+				function getPostDetailsFromDatabase() {
+		    // Get the post title
+		    $postTitle = rawurldecode($_GET["title"]);
 
-			<p>Suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Sollicitudin aliquam ultrices sagittis orci a scelerisque. At quis risus sed vulputate. Diam donec adipiscing tristique risus nec feugiat in. Feugiat scelerisque varius morbi enim nunc. Volutpat maecenas volutpat blandit aliquam etiam. Eget velit aliquet sagittis id consectetur purus ut. Ut etiam sit amet nisl purus in mollis. Ut sem viverra aliquet eget sit amet tellus cras adipiscing. Fringilla est ullamcorper eget nulla. Libero volutpat sed cras ornare arcu dui vivamus. Mattis rhoncus urna neque viverra justo nec ultrices dui. Pharetra et ultrices neque ornare aenean. Volutpat ac tincidunt vitae semper. Mauris ultrices eros in cursus turpis massa tincidunt dui.</p>
+		    // Get the post that matches the postTitle
+		    include_once 'assets/db_connect.php';
+		    $sql = "SELECT * FROM posts WHERE title='" . $postTitle . "'";
+		    $result = mysqli_query($conn, $sql);
+
+		    // Get the first row from the result as an associative array
+		    $postDetails = mysqli_fetch_assoc($result);
+		    return $postDetails;
+		}
+		?>
+		<?php 
+		$postDetails = getPostDetailsFromDatabase();
+		?>
+
+		<h1><?php echo $postDetails ['title']; ?></h1>
+		<div class="post-author"><?php echo $postDetails ['author']; ?></div>
+        <div class="post-date"><?php echo $postDetails ['date']; ?></div>
+        <div class="post-content">
+        	<?php echo $postDetails ['content']; ?>
         </div>
         
 	</main>
