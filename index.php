@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <title>Sebas' blog</title>
 <link rel="stylesheet" href="assets/main.css">
-<script>
-    alert("Hello World");
-</script>
+<script src="hello.js"></script>
 </head>
 <body>
 	<body>
