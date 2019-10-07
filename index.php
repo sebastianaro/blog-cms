@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Sebas' blog</title>
+<script src="assets/script.js"></script>
 <link rel="stylesheet" href="assets/main.css">
-<script src="hello.js"></script>
 </head>
 <body>
 	<body>
@@ -16,6 +16,7 @@
 		  ?>  
   		
 	</header>
+
 	<?php
     function getPostTitlesFromDatabase() {
     // Get all the post titles from the posts table
@@ -33,6 +34,9 @@
 
 	?>
 	<main>
+
+		<button onclick="revealMessage()">Hello</button>
+		<p id="hiddenMessage" style="display: none;">Hello there!</p>
 		<h1>Sebas's Blog</h1>
 
 		<ul>
