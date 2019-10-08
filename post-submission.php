@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Sebas' blog</title>
-<link rel="stylesheet" href="assets/main.css">
+<?php
+      include "head.php";
+      ?>   
 </head>
 <body>
 	<body>
