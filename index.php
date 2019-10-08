@@ -37,17 +37,19 @@
 		<button id="revealMessage">Hello</button>
 		<p id="hiddenMessage" style="display: none;">Hello there!</p>
 		<h1>Sebas's Blog</h1>
-
-		<ul>
+		<div id="sortable-blog-list">
+		<input class="search" placeholder="Search" />
+    	<button class="sort" data-sort="title">Sort</button>
+		<ul class="list">
 			<?php
 			$postTitles = getPostTitlesFromDatabase();
 
 			foreach ($postTitles as $postTitle)  {
-               echo "<li><a href='post.php?title=" . $postTitle ."'>" . $postTitle . "</a></li>";
+               echo "<li><a href='post.php?title=" . $postTitle ."'class='title'>" . $postTitle . "</a></li>";
            	    }
 			?>
 		</ul>
-		<a href="part9.php">here</a>
+        </div>
 	</main>
 <footer>
    <?php
