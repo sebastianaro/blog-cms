@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Sebas' blog</title>
-<script src="assets/script.js"></script>
-<link rel="stylesheet" href="assets/main.css">
+	<?php
+		  include "head.php";
+		  ?> 
 </head>
 <body>
 	<body>
@@ -35,7 +34,7 @@
 	?>
 	<main>
 
-		<button onclick="revealMessage()">Hello</button>
+		<button id="revealMessage">Hello</button>
 		<p id="hiddenMessage" style="display: none;">Hello there!</p>
 		<h1>Sebas's Blog</h1>
 

@@ -1,3 +1,6 @@
-function revealMessage() { 
-	document.getElementById("hiddenMessage").style.display = 'block'
-}
+$(document).ready(function(){
+	$('#revealMessage').click(function(){
+		$('#hiddenMessage').css("display","block")
+		
+	})
+});
