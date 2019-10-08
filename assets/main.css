@@ -27,7 +27,7 @@ main{
   margin:0 auto;
 
 }
-input{
+.search{
 
     border-radius: 25px;
     padding: 7px 14px;
@@ -57,6 +57,17 @@ button{
   padding: 7px 14px;
 
 }
+
+/**
+ * editor
+ */
+
+
+#editor {
+    height: 300px;
+    width:500px;
+}
+
 /**
  * Footer
  */

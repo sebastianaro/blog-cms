@@ -30,6 +30,7 @@
                 <label for="content">Content</label>
                 <textarea name="content" id="content" placeholder="Content"></textarea>
                 <button type="submit" name="submit">Submit</button>
+                <div id="editor"></div>
             </form>
 
 

@@ -7,4 +7,8 @@ $(document).ready(function(){
     valueNames: [ 'title' ]
 };
 new List('sortable-blog-list', options);
+
+ var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/eclipse");
+    editor.session.setMode("ace/mode/javascript");
 });
