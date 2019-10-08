@@ -157,10 +157,7 @@ ul {
 
 /* Post Submission */
 .post-submissions-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    
 }
 
 .post-submissions-form input[type=text], 
