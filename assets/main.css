@@ -157,6 +157,11 @@ ul {
 
 /* Post Submission */
 .post-submissions-form {
+display:block;
+float:left;
+    margin:0 49px 25px 0;
+    text-align:left;
+    width:260px;
     
 }
 

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<?php
-      include "head.php";
-      ?>   
+   <?php
+include "head.php";
+?>
 </head>
 <body>
-	<body>
 
-    <header class="site-header" role="banner">		
+
+    <header class="site-header" role="banner">
     <?php
-          include "header.php";
-          ?>    
-  		
+include "header.php";
+?>
+
 	</header>
 	<main>
 
@@ -20,25 +20,24 @@
             <form action="submit-post.php" method="POST" class="post-submissions-form">
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" placeholder="Title"></input>
-                
+
                 <label for="author">Author</label>
                 <input type="text" id="author" name="author" placeholder="Author"></input>
-                
+
                 <label for="date">Date</label>
                 <input type="date" id="date" name="date" placeholder="MM/DD/YYYY"></input>
-                
+
                 <label for="content">Content</label>
-                <div id="editor"></div>
+                <textarea name="content" id="content" placeholder="Content"></textarea>
                 <button type="submit" name="submit">Submit</button>
-                
             </form>
 
 
 	</main>
 <footer>
     <?php
-          include "footer.php";
-          ?>   
+include "footer.php";
+?>
 </footer>
 </body>
 </html>
